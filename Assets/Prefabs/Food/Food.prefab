@@ -31,10 +31,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4224901194951485558}
   - {fileID: 8870286395155785405}
   - {fileID: 6628299839738442159}
   - {fileID: 8970114700483569857}
-  - {fileID: 4224901194951485558}
   m_Father: {fileID: 8751813207157209473}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -282,9 +282,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 560613247745696307, guid: 83aaa1d5a3dfd554b825a40e861b25c5, type: 3}
+      propertyPath: targetDinosaur
+      value: 
+      objectReference: {fileID: 1464424188008123310}
     - target: {fileID: 762871104519722472, guid: 83aaa1d5a3dfd554b825a40e861b25c5, type: 3}
       propertyPath: m_Name
-      value: FoodUI (1)
+      value: Food2
       objectReference: {fileID: 0}
     - target: {fileID: 2499257673953131737, guid: 83aaa1d5a3dfd554b825a40e861b25c5, type: 3}
       propertyPath: m_Color.b
@@ -319,6 +323,10 @@ PrefabInstance:
     - target: {fileID: 1458758883938941145, guid: db6ce5db700b49346b7fa7d1d3ffe8b6, type: 3}
       propertyPath: m_Name
       value: DiniUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522428763425946147, guid: db6ce5db700b49346b7fa7d1d3ffe8b6, type: 3}
+      propertyPath: acceptDrop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3522428763425946147, guid: db6ce5db700b49346b7fa7d1d3ffe8b6, type: 3}
       propertyPath: onDropped.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -409,6 +417,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db6ce5db700b49346b7fa7d1d3ffe8b6, type: 3}
+--- !u!114 &1464424188008123310 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7149020325501672520, guid: db6ce5db700b49346b7fa7d1d3ffe8b6, type: 3}
+  m_PrefabInstance: {fileID: 8603214569258997734}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4af01da1d91544ba2f37e110919682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4224901194951485558 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5603919745143357328, guid: db6ce5db700b49346b7fa7d1d3ffe8b6, type: 3}
@@ -502,24 +521,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 560613247745696307, guid: 83aaa1d5a3dfd554b825a40e861b25c5, type: 3}
+      propertyPath: targetDinosaur
+      value: 
+      objectReference: {fileID: 1464424188008123310}
     - target: {fileID: 762871104519722472, guid: 83aaa1d5a3dfd554b825a40e861b25c5, type: 3}
       propertyPath: m_Name
-      value: FoodUI (2)
+      value: Vegetable
       objectReference: {fileID: 0}
     - target: {fileID: 2499257673953131737, guid: 83aaa1d5a3dfd554b825a40e861b25c5, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499257673953131737, guid: 83aaa1d5a3dfd554b825a40e861b25c5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 2499257673953131737, guid: 83aaa1d5a3dfd554b825a40e861b25c5, type: 3}
       propertyPath: m_Color.b
-      value: 0.30838373
+      value: 0.2672659
       objectReference: {fileID: 0}
     - target: {fileID: 2499257673953131737, guid: 83aaa1d5a3dfd554b825a40e861b25c5, type: 3}
       propertyPath: m_Color.g
-      value: 0.30838373
+      value: 0.735849
       objectReference: {fileID: 0}
     - target: {fileID: 2499257673953131737, guid: 83aaa1d5a3dfd554b825a40e861b25c5, type: 3}
       propertyPath: m_Color.r
-      value: 0.8490566
+      value: 0.45330846
       objectReference: {fileID: 0}
     - target: {fileID: 8720532734490949893, guid: 83aaa1d5a3dfd554b825a40e861b25c5, type: 3}
       propertyPath: foodType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720532734490949893, guid: 83aaa1d5a3dfd554b825a40e861b25c5, type: 3}
+      propertyPath: isVegetable
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -620,9 +655,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 560613247745696307, guid: 83aaa1d5a3dfd554b825a40e861b25c5, type: 3}
+      propertyPath: targetDinosaur
+      value: 
+      objectReference: {fileID: 1464424188008123310}
     - target: {fileID: 762871104519722472, guid: 83aaa1d5a3dfd554b825a40e861b25c5, type: 3}
       propertyPath: m_Name
-      value: FoodUI
+      value: Food1
       objectReference: {fileID: 0}
     - target: {fileID: 2499257673953131737, guid: 83aaa1d5a3dfd554b825a40e861b25c5, type: 3}
       propertyPath: m_Color.b
