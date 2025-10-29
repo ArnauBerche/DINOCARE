@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 393120415097500849}
   - component: {fileID: 1174539210069282490}
   m_Layer: 5
-  m_Name: Food
+  m_Name: FoodMinigame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

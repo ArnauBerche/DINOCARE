@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class FoodManager : MonoBehaviour
 {
+    public LevelManager levelManager;
     public static FoodManager Instance { get; private set; }
 
     void Awake()
@@ -57,6 +58,8 @@ public class FoodManager : MonoBehaviour
             var parentCanvas = GetComponentInParent<Canvas>();
             if (parentCanvas != null)
             {
+                levelManager = FindFirstObjectByType<LevelManager>();
+                levelManager.CurrentScene++;
                 parentCanvas.gameObject.SetActive(false);
             }
         }

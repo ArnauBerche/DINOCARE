@@ -3,6 +3,8 @@ using UnityEngine.EventSystems;
 
 public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler
 {
+    public LevelManager levelManager;
+
     public RectTransform[] snapTargets;
     public float snapDistance = 40f;
     public bool inPlace = false;
@@ -179,6 +181,8 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             if (!requireAllTargetsVisited)
             {
                 inPlace = true;
+                levelManager = FindFirstObjectByType<LevelManager>();
+                levelManager.CurrentScene++;
                 return;
             }
             else
@@ -195,6 +199,8 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 if (allVisited)
                 {
                     inPlace = true;
+                    levelManager = FindFirstObjectByType<LevelManager>();
+                    levelManager.CurrentScene++;
                     return;
                 }
                 else

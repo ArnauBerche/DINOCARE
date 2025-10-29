@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class WashHands : MonoBehaviour, IPointerDownHandler, IDragHandler, IEndDragHandler
 {
+    public LevelManager levelManager;
+
     public RectTransform centerRect;
     public int requiredSpins = 3;
     public Slider progressSlider;
@@ -78,6 +80,8 @@ public class WashHands : MonoBehaviour, IPointerDownHandler, IDragHandler, IEndD
     {
         if (_isComplete) return;
         _isComplete = true;
+        levelManager = FindFirstObjectByType<LevelManager>();
+        levelManager.CurrentScene++;
         onComplete?.Invoke();
     }
 

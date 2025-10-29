@@ -6,6 +6,7 @@ using TMPro;
 
 public class DialogSystem : MonoBehaviour
 {
+    public LevelManager levelManager;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(2, 4)] private string[] dialogueLines;
@@ -48,6 +49,8 @@ public class DialogSystem : MonoBehaviour
         else
         {
             isTyping = false;
+            levelManager = FindFirstObjectByType<LevelManager>();
+            levelManager.CurrentScene++;
             dialoguePanel.SetActive(false);
         }
     }
